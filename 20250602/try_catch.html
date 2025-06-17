@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- trt catch -->
+    <h2>try catch</h2>
+    <script>
+        try{
+            let riskyOperation = true;
+            let result = riskyOperation;
+            if(!!!result){
+                console.log(result);
+            }
+            else{
+                throw new Error("skip and catch(err)!");
+            }
+        }
+        catch(err){
+            console.error("Catch the Error:", err);
+        }
+    </script>
+    <hr style="background-color: aquamarine; height: 1rem;">
+
+    <!-- math function -->
+    <h2>math function</h2>
+    <script>
+        function mathpi(){return Math.PI;}
+
+        let mathround = (inputnum) => {return Math.round(inputnum);}
+
+        let mathpow = function(inputarr){return Math.pow(inputarr[0], inputarr[1]);}
+
+        let mathsqrt = function(inputnum){return Math.sqrt(inputnum);}
+
+        let mathabs = (inputnum) => {return Math.abs(inputnum);}
+
+        let mathceil = (inputnum) => {return Math.ceil(inputnum);}
+
+        let mathfloor = (inputnum) => {return Math.floor(inputnum);}
+
+        let mathmin = (inputarr) => {return Math.min(...inputarr);} 
+
+        let mathmax = (inputarr) => {return Math.max(...inputarr);}
+
+        let mathrandom = (inputnum) => {return Math.random();}
+
+        function getRandomNumbers() {
+            const numbers = [];
+            while (numbers.length < 6) {
+                let num = Math.floor(Math.random() * 39) + 1;
+                if (!numbers.includes(num)) {
+                    numbers.push(num);
+                }
+            }
+            return numbers;
+        }
+        // function getRandomNumbers() {
+        //     const numbers = new Set();
+        //     while (numbers.size < 6) {
+        //     numbers.add(Math.floor(Math.random() * 39) + 1);
+        //     }
+        //     return Array.from(numbers);
+        // }
+        function main() {
+            console.log("Math.pi:", mathpi());
+            console.log("Math.round;", mathround(3.5));
+            console.log("Math.round:", mathround(3.4));
+            console.log("Math.pow:", mathpow([2,3]));
+            console.log("Math.sqrt:", mathsqrt(16));
+            console.log("Math.abs:", mathabs(-7));
+            console.log("Math.ceil:", mathceil(4.1));
+            console.log("Math.floor:", mathfloor(4.9));
+            console.log("Math.min:", mathmin([3, 5, 1, 9]));
+            console.log("Math.min:", mathmin([-2, 0 ,-5, 4]));
+            console.log("Math.max:", mathmax([3, 5, 1, 9]));
+            console.log("Math.max:", mathmax([-2, 0, -5, 4]));
+            console.log("Math.random:", mathrandom());
+            console.log("Math.random:", Math.floor(Math.random() * 39) + 1);
+            console.log("隨機選擇的號碼:", getRandomNumbers());
+        }
+
+        main();
+    </script>
+    <hr style="background-color: aquamarine; height: 1rem;">
+</body>
+</html>

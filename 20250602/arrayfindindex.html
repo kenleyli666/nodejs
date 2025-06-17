@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- one -->
+    <h2>array findindex function</h2>
+    <script>
+        const STU_AGES = [40, 56, 28, 17, 32, 35];
+
+        let checkStuAges = (age) => {
+            return age <= 18;
+        }
+
+        function main() {
+            return STU_AGES.findIndex(checkStuAges);
+        }
+
+        console.log("select the student age that <= 18:",main())
+    </script>
+    <hr style="background-color:aqua;height: 1rem;">
+
+    <!-- two -->
+    <h2>array indexof function</h2>
+    <script>
+        let notesArr1 = ["javascript","from","notes"];
+
+        console.log(`IndexOf the word \"javascript\" from the notesArr:`, notesArr1.indexOf("javascript"));
+    </script>
+    <hr style="background-color:aqua;height: 1rem;">
+
+    <!-- three -->
+    <h2>array includes function</h2>
+    <script>
+        let notesArr2 = ["javascript","from","notes"];
+
+        console.log(`The notesArr2 include the word \"javascript\" from the notesArr:`, notesArr2.includes("javascript"));
+    </script>
+    <hr style="background-color:aqua;height: 1rem;">
+
+    <!-- four -->
+    <h2>array isArray function</h2>
+    <script>
+        let notesArr3 = ["javascript","from","notes"];
+
+        console.log(`check notesArr3 is array:`, Array.isArray(notesArr3));
+    </script>
+    <hr style="background-color:aqua;height: 1rem;">
+
+    <!-- five -->
+    <h2>array joinArray function</h2>
+    <script>
+        let notesArr4 = ["javascript","from","notes"];
+
+        console.log(`check notesArr4 join:`, notesArr4.join());
+    </script>
+</body>
+</html>

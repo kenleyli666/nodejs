@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- for in loop -->
+     <h2>for in loop</h2>
+     <script>
+        const obj = {a: 1, b: 2, c: 3};
+        for (let key in obj) {
+            console.log(key, obj[key]);
+        }
+     </script>
+     <hr style="background-color: red;height: 1rem;">
+
+     <!-- for of loop -->
+      <h2>for of loop</h2>
+      <script>
+        const array = [1, 2, 3];
+        for(let val of array) {
+            console.log(val);
+        }
+      </script>
+      <hr style="background-color: red;height: 1rem;">
+
+      <!-- for each loop -->
+       <h2>for each loop</h2>
+       <script>
+        const arr = [1, 2, 3];
+        arr.forEach(val => {
+            console.log(`${val}`);
+        });
+       </script>
+       <hr style="background-color: red;height: 1rem;">
+</body>
+</html>

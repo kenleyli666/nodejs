@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- generate password tool -->
+    <h2>generate password tool</h2>
+    <script>
+        function generatePassword(length){
+            const chars = 
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+            let password = "";
+            for(let i =0;i<length;i++) {
+                const randomIndex = Math.floor(Math.random() * chars.length);
+                password += chars[randomIndex];
+            }
+            return password;
+        }
+
+        const passwordLength = 12;
+        const password = generatePassword(passwordLength);
+        console.log("new password:", password)
+    </script>
+
+    <!-- countdown -->
+    <h2>countdown</h2>
+    <script>
+        function countdown(seconds) {
+            const interval = setInterval( () => {
+                console.log("remained time:", seconds, "seconds");
+                seconds--;
+                if(seconds < 0) {
+                    clearInterval(interval);
+                    console.log("countdown end");
+                }
+            }, 1000);
+        }
+
+        const startSeconds = 10;
+        countdown(startSeconds);
+    </script>
+
+    <!-- guess number game -->
+    <h2>guess number game </h2>
+    <script>
+        function guessNumberGame() {
+            const targetNumber = Math.floor(Math.random() * 100) + 1;
+            console.log(targetNumber);
+            let guess = null;
+            while (guess !== targetNumber) {
+                guess = parseInt(prompt("guess the number between 1-100:"), 10);
+                if(guess > targetNumber) {
+                    console.log("too big!");
+                    break;
+                }
+                else if(guess < targetNumber) {
+                    console.log("too small!")
+                    break;
+                }
+                else{
+                    console.log("correct!")
+                    break;
+                }
+            }
+        }
+
+        guessNumberGame();
+    </script>
+</body>
+</html>

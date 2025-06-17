@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>array concat function</h2>
+    <script>
+        let stuArr = ["student", "learn"];
+        let notesArr = ["javascript","from", "notes"];
+        let wholeArr = stuArr.concat(notesArr);
+        console.log(wholeArr);
+    </script>
+    <hr style="background-color:red;height: 1rem;">
+
+    <h2>array every function</h2>
+    <script>
+        const STU_AGES = [40, 56, 28, 17, 32, 35];
+
+        let checkStuAges = (age)=> {
+            return age >= 18;
+        }
+
+        function main() {
+            return STU_AGES.every(checkStuAges);
+        }
+
+        console.log("all student age >= 18:", main());
+    </script>
+    <hr style="background-color:red;height: 1rem;">
+
+    <h2>array filter function</h2>
+    <script>
+        const STU_AGES1 = [40, 56, 28, 17, 32, 35];
+
+        let checkStuAges1 = (age)=> {
+            return age >= 18;
+        }
+
+        function main1() {
+            return STU_AGES.filter(checkStuAges1);
+        }
+
+        console.log("selected the student age that >= 18:", main1());
+    </script>
+    <hr style="background-color:red;height: 1rem;">
+
+    <h2>array find function</h2>
+    <script>
+    const STU_AGES2 = [40, 56, 28, 17, 32, 35];
+
+    let checkStuAges2 = (age)=> {
+        return age <= 18;
+    }
+
+    function main2() {
+        return STU_AGES.find(checkStuAges2);
+    }
+
+    console.log("selected the student age that <= 18:", main2());
+    </script>
+</body>
+</html>

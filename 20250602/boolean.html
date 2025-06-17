@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- boolean one -->
+    <h2>boolean ifelse</h2>
+    <script>
+        let isRaining = true;
+        if(isRaining) {
+            console.log("bring unbrella");
+        }
+        else{
+            console.log("non need umbrella");
+        }
+    </script>
+
+    <!-- boolean while loop -->
+    <h2>boolean while loop</h2>
+    <p id="demo"></p>
+    <script>
+        let count = 0;
+        let txt = "";
+        while (count < 5) {
+            console.log(count);
+            txt +=count;
+            count++;
+        }
+    </script>
+
+    <!-- boolean and or not -->
+    <h2>boolean and or not</h2>
+    <p id="demo1"></p>
+    <script>
+        let isSunny = true;
+        let isWeekend = false;
+        // console will output today rest at home
+        if(isSunny == true && isWeekend == true){
+            console.log("today goout playing");
+        }
+        else{
+            console.log("today rest at home");
+        }
+
+        // consloe will output today goout playing
+        if(isSunny == true || isWeekend == true) {
+            console.log("today goout playing");
+        }
+        else{
+            console.log("today rest at home");
+        }
+
+        // consloe will output today goout playing
+        if(!isWeekend) {
+            console.log("today goout playing");
+        }
+        else{
+            console.log("today rest at home");
+        }
+    </script>
+</body>
+</html>

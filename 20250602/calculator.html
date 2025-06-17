@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- calculator -->
+     <h2>calculator </h2>
+     <script>
+        function calculator(num1 , num2, operator) {
+            switch(operator) {
+                case '+':
+                    return num1 + num2;
+                case '-':
+                    return num1 - num2;
+                case '*':
+                    return num1 * num2;
+                case '/':
+                    return num1 / num2;
+                default:
+                    return "invalid operator";
+            }
+        }
+
+        const num1 = parseFloat(prompt("input the first number:"));
+        const num2 = parseFloat(prompt("input the second number:"));
+        const operator = prompt("input the operate(+, -, * ,/):");
+        const result =  calculator(num1, num2, operator);
+        console.log(`Result: ${result}`);
+     </script>
+
+     <!-- colour generator -->
+      <h2>colour generator</h2>
+      <script>
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF"
+            let color = "#";
+            for(let i=0; i<6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        const radomColor = getRandomColor();
+        document.body.style.backgroundColor = randomColor;
+        console.log(`Generated Color: ${randomColor}`);
+      </script>
+
+      <!-- countdown tool -->
+       <h2>countdown tool</h2>
+       <script>
+        function advancedCountdown(seconds) {
+            const interval = setInterval(() => {
+                console.log(`remained: ${seconds} seconds`);
+                seconds--;
+                if(seconds < 0) {
+                    clearInterval(interval);
+                    console.log("countdown end");
+                }
+            }, 1000);
+        }
+
+        const startSeconds = parseInt(prompt("please enter the countdown seconds:"), 10);
+        advancedCountdown(startSeconds);
+       </script>
+
+       <!-- event countdown -->
+        <h2>event countdown </h2>
+        <script>
+            function eventCountdown(eventDate) {
+                const eventTime = new Date(eventDate).getTime();
+
+                const interval = setInterval(() => {
+                    const now = new Date().getTime();
+                    const timeDifference = eventTime - now;
+
+                    if(timeDifference < 0) {
+                        clearInterval(interval);
+                        console.log("the event has occured");
+                        return;
+                    }
+
+                    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60));
+                    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                console.log(`Remained: ${days} Day ${hours} Hour ${minutes} Minutes ${seconds} Seconds`);
+                }, 1000);
+            }
+
+            const eventDate = prompt("please enter event date and time(Flormat:YYYY-MM-DDTHH:MM:SS):");
+
+            eventCountdown(eventDate);
+        </script>
+</body>
+</html>

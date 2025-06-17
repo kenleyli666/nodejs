@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- currency exchamge calculator -->
+    <h2>currency exchamge calculator</h2>
+    <script>
+        function convertCurrency(amount, fromCurrency, toCurrency) {
+
+            const exchangeRates = {
+                'HKD': 1,
+                'CNY': 0.93,
+                "USD": 0.13,
+                'EUR': 0.12,
+                'JPY': 20.21
+            };
+
+            if(!exchangeRates[fromCurrency] || !exchangeRates[toCurrency]) {
+                return "invalid currency type";
+            }
+
+            const curr = amount / exchangeRates[fromCurrency];
+            return curr * exchangeRates[toCurrency];
+        }
+
+        const amount = parseFloat(prompt("pls enter the amount:"));
+        const fromCurrency = prompt("pls enter source currency (HKD, CNY, USD, EUR, JPY):");
+        const toCurrency = prompt("pls enter target currency (HKD, CNY, USD, EUR, JPY):");
+        const convertedAmount = convertCurrency(amount, fromCurrency, toCurrency);
+
+        if(convertedAmount != "invalid currency type") {
+            console.log(`${fromCurrency} ${amount} = ${toCurrency} ${convertedAmount.toFixed(2)}`);
+            console.log(`the exchanged amount is: ${convertedAmount.toFixed(2)} ${toCurrency}`);
+        }
+        else{
+            console.log(convertedAmount); 
+        }
+    </script>
+
+    <!-- DATE DIFFERENCE CALCULATOR -->
+    <h2>DATE DIFFERENCE CALCULATOR </h2>
+    <script>
+        function calcDateDiff(date1, date2) {
+            const date1Obj = new Date(date1);
+            const date2Obj = new Date(date2);
+            const timeDiff = Math.abs(date2Obj - date1Obj);
+            return Math.round(timeDiff / (24 * 60 * 60 *1000));
+        }
+
+        const date1 = prompt("pls enter the 1st date(Format: YYYY-MM-DD):");
+        const date2 = prompt("pls enter the 2ND date(Format: YYYY-MM-DD):");
+        const daysDiff = calcDateDiff(date1, date2);
+        console.log(`the difference of two \"${date1}\" and \"${date2}\" is ${daysDiff} Day`);
+    </script>
+</body>
+</html>

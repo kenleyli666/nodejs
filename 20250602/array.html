@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>array</h2>
+    <p id="demo"></p>
+    <script>
+        // 建立一個包含水果名稱的陣列
+        let fruits = ["apple", "banana", "cherry"];
+
+        console.log("original array:", fruits); //1.顯示陣列中的所有元素
+
+        fruits.push("orange"); //2.add新元素到陣列的未尾
+        console.log("array after adding a mew e;e,emt:", fruits);
+
+        let lastFruit = fruits.pop();
+        console.log("removed element:", lastFruit);
+        console.log("array after removing the last element::", fruits);
+
+        fruits.unshift("strawberry");
+        console.log("array after adding a new element at the beginning:" , fruits);
+
+        let fristFruit = fruits.shift();
+        console.log("removed frist element:", fristFruit);
+        console.log("array after removing the first element:", fruits);
+
+        console.log("all element in the array:");
+        fruits.forEach(function(arr, i){
+            console.log(i+":"+arr);
+        });
+        
+        let upperCaseFruits = fruits.map(function(value){
+            return value.toUpperCase();
+        });
+        console.log("array with fruit name in uppercase:", upperCaseFruits);
+
+        let longNamedFruits = fruits.filter(function(value){
+            return value.length > 5;
+        })
+        console.log("fruits with names longer than 5 character:", longNamedFruits);
+    </script>
+</body>
+</html>

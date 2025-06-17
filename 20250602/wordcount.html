@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- word count tool -->
+        <h2>word count tool</h2>
+        <script>
+            function countWords(text){
+                const words = text.trim().split(/\s+/);  //text.trim().split(" ")
+                return words.length;
+            }
+
+            const text = prompt("pls enter a sentence of text:");
+            const wordCount = countWords(text);
+            console.log(`the sentence include ${wordCount} words.`);
+        </script>
+
+        <!-- calculate average tool -->
+        <h2>calculate average tool</h2>
+        <script>
+            function calcAverage(nums) {
+                const total = nums.reduce((acc, num)=> { acc + num, 0});
+                console.log(nums.join().replaceAll(",","+"),`=${total}`);
+                return total / nums.length;
+            }
+
+            const nums = prompt("pls enter a set of nums separated by commas:").split('.').map(Number);
+
+            const average = calcAverage(nums);
+            console.log(`the average of this set of nums is ${average}`);
+        </script>
+</body>
+</html>

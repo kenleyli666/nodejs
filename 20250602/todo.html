@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- to-do-list -->
+    <h2>to-do-list</h2>
+    <script>
+        const todoList = [];
+        function addTodo() {
+            const newTodo = prompt("pls enter a new to-do item:");
+            if(newTodo) {
+                todoList.push(newTodo);
+                console.log("to-do item added:", newTodo);
+            }
+            displayTodos();
+        }
+
+        function deleteTodo() {
+            const index = parseInt(prompt("pls enter the to-do item num to be deleted:"), 10) -1;
+            if(index >= 0 && index < todoList.length) {
+                const deleteTodo = todoList.splice(index, 1);
+                console.log("to-do-item deleted:", deleteTodo[0]);
+            }
+            else{
+                console.log("invalid num");
+            }
+            displayTodos();
+        }
+
+        function displayTodos() {
+            console.clear();
+            console.log("to-do list");
+            todoList.forEach((todo, index) => {
+                console.log(`${index + 1}. ${todo}`);
+            });
+        }
+
+        while (true) {
+            const action = prompt("pls select an operation: 1. add to-do list 2.delete to-do list 3.leave")
+
+        if (action === "1") {
+            addTodo();
+        }
+        else if (action === "2") {
+            deleteTodo();
+        }
+        else if (action === "3") {
+            console.log("exit application");
+            break;
+        }
+        else{
+            console.log("invail selection");
+        }
+        };
+
+    </script>
+</body>
+</html>

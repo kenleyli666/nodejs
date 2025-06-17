@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- setInterval function -->
+    <h2>setInterval function</h2>
+    <script>
+        let timer1 = (interval) =>{
+            // show a new per second
+            setInterval(()=> {console.log("a second pass");},interval);
+        }
+        function main( ){timer1(1000);}
+        main(); //excute all sub func by main func
+    </script>
+    <hr style="background-color: blueviolet;height: 1rem;">
+
+
+    <!-- setTimeout function-->
+    <h2>setTimeout function</h2>
+    <script>
+        let timer2 = (interval) =>{
+            // one news dalay 10 second to display
+            setTimeout(()=> {console.log("a second pass")}, interval);
+        }
+        function main( ){timer2 (10000); }
+        main(); //excute all sub func by main func
+    </script>
+    <hr style="background-color: blueviolet;height: 1rem;">
+
+
+    <!-- string operation -->
+    <h2>string operation</h2>
+    <script>
+        let singlequote = () =>{
+            console.log(
+                "single quote:",
+                "this sample sentence contains the 'single quote'."
+            );
+        };
+
+        let dblquote = () => {
+            console.log(
+                "double quote:",
+                "this sample sentence contains the 'double quote'."
+            );
+        };
+
+        let bkslash = () =>{
+            console.log(
+                "backsalash:",
+                "this sample sentence contains the \\\back slash\\\."
+            );
+        };
+
+        let newline = () =>{
+            console.log(
+                "sentence with new line:",
+                "this sample sentence with new line.\n\rSentence after new line."
+            );
+        };
+
+        let sentwtab = () =>{
+            console.log(
+                "sentence with tab:",
+                "this sample sentence with tab \tafter new line."
+            );
+        };
+
+        let sentlength = (input_sent) =>{
+            console.log(
+                "sentence length:",
+                input_sent.length
+            );
+        };
+
+        let sentcharat = (input_sent, index) =>{
+            console.log(
+                "find character at ${index}:",
+                input_sent.charAt(index)
+            );
+        };
+
+        let sentconcat = (input_sent, concat_sent) =>{
+            console.log(
+                "concat sentence:",
+                input_sent.concat(concat_sent)
+            );
+        };
+        
+        let sentendw = (input_sent, contain_word) =>{
+            console.log(
+                `sentence end with \"${contain_word}\":`,
+                input_sent.endsWith(contain_word)
+            );
+        };
+
+        let sentidxof = (input_sent, contain_word) =>{
+            console.log(
+                `sentence indexOf\"${contain_word}\":`,
+                input_sent.indexOf(contain_word)
+            );
+        };
+
+        let send_inc = (input_sent, contain_word) =>{
+            console.log(
+                `sentence include\"${contain_word}\":`,
+                input_sent.includes(contain_word)
+            );
+        };
+
+        let lastidxof = (input_sent, contain_word) =>{
+            console.log(
+                `sentence lastIndexOf\"${contain_word}\":`,
+                input_sent.lastIndexOf(contain_word)
+            );
+        };
+
+        let repeattxt = (input_sent, times) =>{
+            console.log(
+                `sentence repeat ${times} times:`,
+                input_sent.repeat(times)
+            );
+        };
+
+        let replacetxt = (input_sent, tgt_txt, new_txt) =>{
+            console.log(
+                `replace \"$tgt_txt}\" to \"${new_txt}\" from sentence:`,
+                input_sent.replace(tgt_txt, new_txt)
+            );
+        };
+
+        let replacealltxt = (input_sent, tgt_txt, new_txt) =>{
+            console.log(
+                `replace all \"$tgt_txt}\ to \"$new_txt}\" from sentence:`,
+                input_sent.replaceAll(tgt_txt, new_txt)
+            );
+        };
+
+        let searchtxt = (input_sent, tgt_txt) =>{
+            console.log(
+                `search the key \"$tgt_txt}\ from sentence:`,
+                input_sent.search(tgt_txt)
+            );
+        };
+
+        let slice = (input_sent, start, end) =>{
+            console.log(
+                `slice sentence from the index of ${start} to ${end}:`,
+                input_sent.search(start, end)
+            );
+        };
+
+        let split = (input_sent, split_char, idx) =>{ //the 1
+            console.log(
+                `split sentence with keyword \"${split_char}\":`,
+                input_sent.split(split_char)[idx]
+            );
+        };
+
+        let startw= (input_sent,startw_text) =>{
+            console.log(
+                `sentence start with keyword\"${startw_text}\":`,
+                input_sent.startsWith(startw_text)
+            );
+        };
+
+        let substrlen = (input_sent, start) =>{
+            console.log(
+                `crop sentence after the index of ${start}:`,
+                input_sent.substr(start)
+            );
+        };
+
+        let substrrange = (input_sent, start, end) =>{
+            console.log(
+                `crop sentence from the index of ${start} to ${end}:`,
+                input_sent.substr(start, end)
+            );
+        };
+
+        let lowercase = (input_sent) =>{
+            console.log(
+                `sentence lowercase:`,
+                input_sent.toLowerCase()
+            );
+        };
+
+        let uppercase = (input_sent) =>{
+            console.log(
+                `sentence uppercase:`,
+                input_sent.toUpperCase()
+            );
+        };
+
+        let trimspace = (input_sent) =>{
+            console.log(
+                `trim empty space at sentence begin and the end:`,
+                input_sent.trim()
+            );
+        };
+
+        function main() {
+            const INPUT_SENT = "this is the javescript demo from notes.";
+            singlequote();
+            dblquote();
+            bkslash();
+            newline();
+            sentwtab();
+            sentlength(INPUT_SENT);
+            sentcharat(INPUT_SENT, 2);
+            sentconcat(INPUT_SENT, "you can learn javascript from this class.");
+            sentendw(INPUT_SENT, "notes.");
+            sentidxof(INPUT_SENT, "javascript");
+            send_inc(INPUT_SENT, "javascript");
+            lastidxof(INPUT_SENT, "javascript");
+            repeattxt(INPUT_SENT, 3);
+            replacetxt(INPUT_SENT, "demo", "exapmle");
+            replacealltxt(INPUT_SENT, "demo", "exapmle");
+            searchtxt(INPUT_SENT, "javascript");
+            slice(INPUT_SENT, 8, 23);
+            split(INPUT_SENT, "the", 1);
+            startw(INPUT_SENT, "this");
+            substrlen(INPUT_SENT, 8);
+            lowercase(INPUT_SENT);
+            uppercase(INPUT_SENT);
+            trimspace(""+ INPUT_SENT +"");
+        }
+
+        main(); //excute all sub func by main func
+    </script>
+    <hr style="background-color: blueviolet;height: 1rem;">
+</body>
+</html>

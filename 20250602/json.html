@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>json function</h2>
+    <script>
+        const jsonString ='{"name" : "Chan Tai Man","age" : 28,"email" : "taimanchan@Example.com","address": {"building" : "Heya Star","street": "368 Castle peak road","disstrict": "Cheung Sha Wan, KLN"},"phoneNumber": [{"type": "home", "number": "31944321"} ,{"type": "mobile","number": "67891234"},{"type": "office","number": "31941234"}] }';
+
+        const person = JSON.parse(jsonString);
+        console.log(person);
+        console.log(person.name);
+        console.log(person.email);
+        console.log(person.address.building); //jsonobject
+        console.log(person.phoneNumber[1].number); //jsonarray
+
+        // let javascriipt object convert to json string
+        const jsonobject = 
+        {
+            "name" : "Chan Tai Man",
+            "age" : 28,
+            "email" : "taimanchan@Example.com",
+            "address": {"building" : "Heya Star","street": "368 Castle peak road","disstrict": "Cheung Sha Wan, KLN"},
+            "phoneNumber": [
+                {"type": "home", "number": "31944321"} ,
+                {"type": "mobile","number": "67891234"},
+                {"type": "office","number": "31941234"}
+            ]
+        }
+        const jsonStringified = JSON.stringify(jsonobject);
+        console.log(jsonStringified);
+    </script>
+</body>
+</html>

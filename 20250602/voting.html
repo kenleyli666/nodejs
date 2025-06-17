@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- voting system -->
+    <h2>
+        voting system
+    </h2>
+    <script>
+        function votingSystem() {
+            const candidates = ["Alice", "Bob", "Charlie"];
+            const votes = [0, 0 ,0];
+            let voting = true;
+
+        while(voting) {
+            const vote = prompt("please vote the following candidate:\n1. ${candidates}[0]\n2. ${candidates[1]\n3. ${candidates[2]}\n(Input 0 to end the voting)}");
+            const voteIndex = parseInt(vote, 10) -1;
+
+            if(voteIndex >= 0 && voteIndex < candidates.length) {
+                votes[voteIndex]++
+                console.log("${candidates[voteIndex]} got 1 vote!");
+            }
+            else if(voteIndex === 1){
+                voting = flase;
+            }
+            else{
+                console.log("invalid input, pls try again")
+            }
+        }
+
+        console.log("voting end");
+        candidates.foreach((candidates, index) => {
+            console.log(`${candidate}:${votes[index]}vote`);
+        });
+    }
+
+    votingSystem();
+    </script>
+
+    <!-- template converter -->
+    <h2>template converter </h2>
+    <script>
+        function celsiusToFahrenheit(celsius) {
+            return celsius * 9/5 + 32;
+        }
+
+        const celius = parseFloat(prompt("pls enter the temperature in celsius:"));
+        const fahrenheit = celsiusToFahrenheit(celius);
+        console.log(`${celius}degree incelsius equal to ${fahrenheit} degree in fahtenheit`);
+    </script>
+
+    <!-- BMI Tool -->
+    <h2>BMI Tool</h2>
+    <script>
+        function calculateBMI(weight, height) {
+            return weight / (height * height);
+        }
+
+        const weight = parseFloat(prompt("please enter your weight (KG):"));
+        const height = parseFloat(prompt("please enter your height (Meter):"));
+        const bmi =  calculateBMI(weight, height);
+        console.log(`youe BMI is: ${bmi.toFixed(2)}`);
+
+        if(bmi < 18.5) {
+            console.log("light weight");
+        }
+        else if(bmi >= 18.5 && bmi < 24.9) {
+            console.log("normal weight");
+        }
+        else if(bmi >= 25 && bmi < 29.9) {
+            console.log("heavy weight")
+        }
+        else{
+            console.log("obesity");
+        }
+    </script>
+</body>
+</html>

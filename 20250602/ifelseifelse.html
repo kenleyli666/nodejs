@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- if...else if...else -->
+    <h2>if condition</h2>
+    <script>
+        let age = 18;
+        if(age >= 18) {
+            console.log("you are an adult");
+        }
+
+        if(age >= 18) {
+            console.log("you are an adult");
+        }
+        else{
+            console.log("you are a minor");
+        }
+
+        let score =85;
+        if(score >= 90) {
+            console.log("Grade A");
+        }
+        else if(score >= 80) {
+            console.log("Grade B");
+        }
+        else{
+            console.log("Grade C");
+        }
+    </script>
+    <hr style="background-color: blueviolet;height: 1rem;">
+
+    <!-- conditional expression/ternary opeator -->
+    <h2>conditional expression</h2>
+    <script>
+        let age1 = 20;
+        let message = age1 >= 18 ? "You are an adult" : "You are minor";
+        console.log(message);
+    </script>
+    <hr style="background-color: blueviolet;height: 1rem;">
+
+    <!-- switch -->
+    <h2>switch</h2>
+    <script>
+        let day = "Tuesday";
+        switch(day) {
+            case "Monday":
+                console.log("start of the work week");
+                break;
+            case "Tuesday":
+                console.log("second of the work week");
+                break;
+            case "Wednesday":
+                console.log("midweek");
+                break;
+            case "Thursday":
+                console.log("almost the weekend");
+                break;
+            case "Friday":
+                console.log("last workday of the week");
+                break;  
+            default:
+                console.log("it's the weekend")
+    }
+    </script>
+    <hr style="background-color: blueviolet;height: 1rem;">
+</body>
+</html>

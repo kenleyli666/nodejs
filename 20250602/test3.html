@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // function getRandom(length){
+        //     const letter = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","X","Y","Z"];
+        
+        //     let password = [];
+            
+        //     for(let value = 0 ; value < 6; value++ ){
+
+        //         let randomIndex = Math.floor(Math.random()*letter.length);
+
+        //         let result = letter[randomIndex];
+        //         password += result
+                //    letter.splice(randomIndex, 1);
+        //     }
+        //     return password;
+        //     }
+
+        //    console.log(getRandom(6));
+
+    //     function generateCaptcha(){
+    //         const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZ";
+    //         const pool = chars.split(""); //["0","1",...."Z"];
+    //         let password = "";
+    //         for(let i= 0; i < 6; i++){
+    //             const randomIndex = Math.floor(Math.random()*pool.length); 
+    //             password += pool[randomIndex]; //"R"
+    //             pool.splice(randomIndex, 1); //delete choice chars
+    //         }
+    //         console.log(password)
+    //     }
+    //    generateCaptcha();
+
+    // function drawStudents(){
+    //     const students = ["Alice","Bob","Charlie","David","Eve","Frank","Grace"];
+    //     const drawStudents =[]; 
+
+    //     for(let i = 0; i < 3;i++){
+    //         const randomIndex = Math.floor(Math.random()*students.length); 
+    //         drawStudents.push(students[randomIndex]);
+    //             students.splice(randomIndex, 1);
+    //     }
+    //     console.log("extracted student name", drawStudents);
+    //     console.log("remaining student name", students);
+    // }
+    // drawStudents();
+
+    function rollDice(){
+        const results = [];
+        let total = 0;
+
+        for(let i = 0 ; i < 10; i++){
+            const dice1 = Math.floor(Math.random() * 6)+1; //Math.floor(0.3*6)=1+1=2
+            const dice2 = Math.floor(Math.random() * 6)+1; //Math.floor(0.5*6)=3+1=4
+            const sum = dice1 + dice2;
+            results.push(sum);
+            total +=sum; //no display the varible total
+            console.log(`Roll Dice${i + 1}times: Dice 1 = ${dice1},Dice2 = ${dice2}, Total = ${sum}`);
+        }
+        console.log("the results of all dice rolls:", results);
+        console.log("Final total of all rolls:", total);
+    }
+    rollDice();
+    </script>
+</body>
+</html>
